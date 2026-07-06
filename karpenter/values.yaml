@@ -1,0 +1,5 @@
+settings:
+  clusterName: "cloud-labs"
+  interruptionQueue: "cloud-labs-karpenter"
+serviceAccount:
+  name: karpenter
