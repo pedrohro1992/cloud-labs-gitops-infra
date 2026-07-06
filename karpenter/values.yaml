@@ -5,6 +5,8 @@ serviceAccount:
   name: karpenter
 serviceAccount:
   name: karpenter
+aws:
+  defaultRegion: "us-east-1"
 controller:
   resources:
     requests:
