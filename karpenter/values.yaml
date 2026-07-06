@@ -3,3 +3,13 @@ settings:
   interruptionQueue: "cloud-labs-karpenter"
 serviceAccount:
   name: karpenter
+serviceAccount:
+  name: karpenter
+controller:
+  resources:
+    requests:
+      cpu: "1"
+      memory: "1Gi"
+    limits:
+      cpu: "1"
+      memory: "1Gi"
