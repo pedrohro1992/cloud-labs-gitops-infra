@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-ingressgateway
+  namespace: argocd
+spec:
+  project: platform-services
+  sources:
+    # Fonte 1: Chart oficial do Gateway do Istio
+    - repoURL: https://istio-release.storage.googleapis.com/charts
+      chart: gateway
+      targetRevision: 1.22.0
+      helm:
+        valueFiles:
+          - $values-repo/istio/gateway-values.yaml
+    
+    - repoURL: 'https://github.com/pedrohro1992/cloud-labs-gitops-infra.git'
+      targetRevision: HEAD
+      ref: values-repo
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
