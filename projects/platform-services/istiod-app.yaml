@@ -34,4 +34,4 @@ spec:
       kind: ValidatingWebhookConfiguration
       jsonPointers:
         - /webhooks/0/clientConfig/caBundle
-        - /webhooks/1/failurePolicy
+        - /webhooks/0/failurePolicy
