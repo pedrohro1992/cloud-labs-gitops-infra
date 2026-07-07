@@ -6,7 +6,7 @@ webhook:
 settings:
   clusterName: "cloud-labs"
   interruptionQueue: "cloud-labs-karpenter"
-  enableZonalShift: true
+  enableZonalShift: false
 env:
   - name: AWS_REGION
   - value: us-east-1
