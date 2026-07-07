@@ -1,10 +1,12 @@
+nodeSelector:
+  cloudlabs.infra-services: 'true'
+dnsPolicy: Default
+webhook:
+  enabled: false
 settings:
   clusterName: "cloud-labs"
   interruptionQueue: "cloud-labs-karpenter"
-serviceAccount:
-  name: karpenter
-serviceAccount:
-  name: karpenter
+  enableZonalShift: true
 env:
   - name: AWS_REGION
   - value: us-east-1
