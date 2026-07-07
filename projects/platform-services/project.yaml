@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: platform-services
+  namespace: argocd
+spec:
+  description: "Core platform componentes project"
+  destinations:
+    - server: 'https://kubernetes.default.svc'
+      namespace: '*'
+  sourceRepos:
+    - 'https://github.com/seu-usuario/cloud-labs-gitops-infra.git'
+    - 'https://istio-release.storage.googleapis.com/charts'
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
