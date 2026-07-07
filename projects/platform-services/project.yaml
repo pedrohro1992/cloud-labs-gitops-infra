@@ -9,7 +9,7 @@ spec:
     - server: 'https://kubernetes.default.svc'
       namespace: '*'
   sourceRepos:
-    - 'https://github.com/seu-usuario/cloud-labs-gitops-infra.git'
+    - 'https://github.com/pedrohro1992/cloud-labs-gitops-infra.git'
     - 'https://istio-release.storage.googleapis.com/charts'
   clusterResourceWhitelist:
     - group: '*'

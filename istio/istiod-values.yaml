@@ -1,0 +1,12 @@
+meshConfig:
+  accessLogFile: /dev/stdout # Habilita logs de acessos L7 nos sidecars para debug facil
+  enableAutoMtls: true      # Habilita mTLS permissivo por padrão (boa prática para migrações)
+
+pilot:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
